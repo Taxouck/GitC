@@ -32,7 +32,7 @@ int main()
     printf("Entrez la largeur\n");
     scanf("%i",&largeur);
 
-    for(i=0;i<longueur;i++){
+    /* for(i=0;i<longueur;i++){
             for(j=0;j<longueur;j++){
                     if(i==0 || i==longueur-1 || j==0 || j==largeur-1){
                         printf("#");
@@ -41,6 +41,17 @@ int main()
                     }
             }
             printf("\n");
+    } */
+
+    for(i=1;i<longueur+1;i++){
+        for(j=1;j<longueur+1;j++){
+            if(i==j || longueur+1-i==j){ //Si la case actuelle est une diagonale...
+                printf("#");  //...mettre un symbole
+            } else {
+                printf(" "); //...sinon, mettre un espace
+            }
+        }
+        printf("\n");
     }
 
 }
